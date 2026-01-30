@@ -1,0 +1,30 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    background: #f0f0f0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#container {
+    display: flex;
+    flex-wrap: wrap;/* 16 cases/ligne et retour ligne */
+    width: 500px;
+    height: 500px;
+    border: 2px solid #333;
+    background: white;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.grid-square {
+    flex: 1 1 calc(100% / 16 - 2px); /*16 colonnes égales + s'adaptent*/
+    border: 1px solid #ddd;
+    box-sizing: border-box;/*pour que l'élément enfant ne dépasse pas du parent   */
+}
+.grid-square:hover {
+    background: #ddd;
+}
